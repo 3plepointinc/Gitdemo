@@ -1,0 +1,14 @@
+name: shell commands
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: echo string
+        run: echo "Hello World"
+      - name: multi string
+        run: |
+          node -v
+          npm -v
